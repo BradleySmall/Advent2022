@@ -5,13 +5,15 @@ import lombok.extern.log4j.Log4j;
 import java.io.IOException;
 import java.util.List;
 
+import static com.small.advent2022.AdventSolution.getListFromFile;
+
 @Log4j
 public class Main {
     public static void main(String[] args) throws IOException {
         log.info("Hello world!");
         CalorieCounting calorieCounting = new CalorieCounting();
 
-        List<String> list = calorieCounting.getListFromFile("input.txt");
+        List<String> list = getListFromFile("input.txt");
         List <Integer> listSum = calorieCounting.getLisOfSums(list);
 
         log.info("Largest Single Sum = " + listSum.get(0));
