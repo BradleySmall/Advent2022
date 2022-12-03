@@ -14,8 +14,13 @@ public class Main {
         log.info("Hello world!");
 
         try {
-            List<String> list = getListFromFile("Day3/test_input.txt");
+            List<String> list = getListFromFile("Day3/input.txt");
             log.info(list);
+            RucksackReorganization rr = new RucksackReorganization();
+            int priority = rr.calculatePriorityForList(list);
+            log.info("Priority: " + priority);
+            int badgePriority = rr.calculateBadgePriorityForList(list);
+            log.info("Badge Priority: " + badgePriority);
         } catch (IOException ioException) {
             log.info(ioException.getMessage());
         }
