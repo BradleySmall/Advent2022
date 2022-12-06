@@ -13,7 +13,7 @@ public class Main {
         log.info("Hello world!");
         CalorieCounting calorieCounting = new CalorieCounting();
 
-        List<String> list = getListFromFile("input.txt");
+        List<String> list = getListFromFile("Day1/input.txt");
         List <Integer> listSum = calorieCounting.getLisOfSums(list);
 
         log.info("Largest Single Sum = " + listSum.get(0));
